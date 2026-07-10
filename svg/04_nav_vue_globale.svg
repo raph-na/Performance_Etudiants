@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <title>📊 Vue Globale</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4F72"/>
+      <stop offset="100%" stop-color="#2980B9"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="38" fill="url(#bg)"/>
+  <g transform="translate(16,16) scale(2)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Graphique barres -->
+      <rect x="3"  y="15" width="4" height="7" rx="1" fill="rgba(255,255,255,0.7)"/>
+      <rect x="10" y="9"  width="4" height="13" rx="1" fill="white"/>
+      <rect x="17" y="4"  width="4" height="18" rx="1" fill="rgba(255,255,255,0.85)"/>
+      <line x1="2" y1="22" x2="22" y2="22" stroke="white" stroke-width="1.5"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <title>🎛️ Filtres Interactifs</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A148C"/>
+      <stop offset="100%" stop-color="#7B1FA2"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="38" fill="url(#bg)"/>
+  <g transform="translate(16,16) scale(2)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Sliders / curseurs -->
+      <line x1="4"  y1="6"  x2="20" y2="6"  stroke="white" stroke-width="2"/>
+      <circle cx="14" cy="6"  r="2.8" fill="white"/>
+      <line x1="4"  y1="12" x2="20" y2="12" stroke="white" stroke-width="2"/>
+      <circle cx="8"  cy="12" r="2.8" fill="white"/>
+      <line x1="4"  y1="18" x2="20" y2="18" stroke="white" stroke-width="2"/>
+      <circle cx="16" cy="18" r="2.8" fill="white"/>
+  </g>
+</svg>

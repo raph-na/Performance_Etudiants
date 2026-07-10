@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <title>🏛️ Institution / Département</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D2137"/>
+      <stop offset="100%" stop-color="#1B4F72"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="38" fill="url(#bg)"/>
+  <g transform="translate(16,16) scale(2)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Bâtiment / Temple -->
+      <polygon points="2,10 12,3 22,10" fill="rgba(255,255,255,0.85)"/>
+      <rect x="5"  y="10" width="2.2" height="9" rx=".5" fill="white"/>
+      <rect x="9"  y="10" width="2.2" height="9" rx=".5" fill="white"/>
+      <rect x="13" y="10" width="2.2" height="9" rx=".5" fill="white"/>
+      <rect x="17" y="10" width="2.2" height="9" rx=".5" fill="white"/>
+      <rect x="4"  y="19" width="16"  height="2" rx=".5" fill="rgba(255,255,255,0.8)"/>
+      <rect x="2"  y="21" width="20"  height="2" rx=".5" fill="white"/>
+  </g>
+</svg>

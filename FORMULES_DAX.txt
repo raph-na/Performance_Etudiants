@@ -1,0 +1,90 @@
+FORMULES DAX DE DEC
+IF (
+    ISBLANK('INF111_S1'[MOY]),"NV",
+    IF('INF111_S1'[MOY]>=10,"VA","NV")
+)
+
+FORMULE POWERQUERY DE DEC
+if [MOY] = null then "NV"
+else if [MOY] >= 10 then "VA"
+else "NV"
+
+FORMULES DE MOY
+MOY = 0.1*[TE]+0.2*[CC]+0.7*[EX]
+
+FORMULES DE CREDIT
+if [MOY] = null then 0
+else if [MOY] >= 10 then 6
+else 0
+
+FORMULES DU GRADE 
+if [MOY] = null then null
+else if [MOY] >= 18 then "A+"
+else if [MOY] >= 16 then "A"
+else if [MOY] >= 14 then "B+"
+else if [MOY] >= 12 then "B"
+else if [MOY] >= 11 then "C+"
+else if [MOY] >= 10 then "C"
+else if [MOY] >= 8 then "D"
+else "E"
+
+ANNÉE D'INSCRIPTION 
+Text.Start([MATRICULE],2)
+
+if [NIVEAU]="L2" and [ANNEE_INSCRIT]<24 then "Redoublant"
+else if [NIVEAU]="L2" and [ANNEE_INSCRIT]=24 then "Non Redoublant"
+else if [NIVEAU]="L1" and [ANNEE_INSCRIT]<23 then "Redoublant"
+else if [NIVEAU]="L1" and [ANNEE_INSCRIT]=23 then "Non Redoublant"
+else "Non Redoublant"
+
+statut va/nv
+if [INF121]>=10 and [INF122]>=10 and [INF123]>=10 and [INF124]>=10 and [LAN121]>=10 and [MAT121]>=10 then "VA"
+else "NV"
+
+moyenne sem1
+([INF111]+[INF112]+[INF113]+[INF114]+[LAN111]+[MAT111])/6
+
+statut moy sem 4
+if [INF221]>=10 and [INF222]>=10 and [INF223]>=10 and [INF224]>=10 and [LAN221]>=10 and [INF225]>=10  then "VA" 
+else "NV"
+
+nbre ue echec 1
+List.Count(
+    List.Select(
+        {[INF111],[INF112],[INF113],[INF114],[LAN111],[MAT111]},  each _ <> null and _ <=10
+    )
+)
+
+nbre ue echec 2
+List.Count(
+    List.Select(
+        {[INF211],[INF212],[INF213],[INF214],[LAN211],[MAT211]},  each _ <> null and _ <=10
+    )
+)
+
+heure sommeil
+Number.FromText(
+    Text.BeforeDelimiter([HEURES_SOMMEIL],"h")
+)
+
+nbre credit
+            (if [INF111] >= 10 then 6 else 0) +
+            (if [INF112] >= 10 then 6 else 0) +
+            (if [INF113] >= 10 then 6 else 0) +
+            (if [INF114] >= 10 then 6 else 0) +
+            (if [LAN111] >= 10 then 3 else 0) +
+            (if [MAT111] >= 10 then 3 else 0)
+
+if ([nbre_credit_sem1]+[nbre_credit_sem2])>45 then "VA" else "NV"
+
+ecart type
+List.StandardDeviation({[INF111],[INF112],[INF113],[INF114],[LAN111],[MAT111]})
+
+statut_niveau1
+if [nbre_credit] >=45 then "VA" else "NV"
+
+
+#Fait_Note_2 
+if [Nb_abandon] > 0 then "Abandon"
+else if [Moyenne_gen] >= 10 then "VA"
+else "NV"

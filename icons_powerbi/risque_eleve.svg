@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <rect width="80" height="80" rx="18" fill="#111D33"/>
+  <circle cx="40" cy="40" r="24" fill="rgba(245,166,35,.15)"/>
+  <circle cx="40" cy="40" r="24" fill="none" stroke="#F5A623" stroke-width="3"
+    stroke-dasharray="112 38"/>
+  <text x="40" y="37" fill="#F5A623" font-size="9" font-weight="700"
+    text-anchor="middle" font-family="system-ui">RISQUE</text>
+  <text x="40" y="50" fill="#F5A623" font-size="9"
+    text-anchor="middle" font-family="system-ui">ÉLEVÉ</text>
+</svg>

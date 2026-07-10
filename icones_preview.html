@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Jeu d'icônes – Dashboard Performances Académiques</title>
+<style>
+  :root {
+    --navy:#0D1B2A; --blue:#1B4F72; --accent:#E8A020; --gold:#F5C842;
+    --card:rgba(255,255,255,0.06); --border:rgba(255,255,255,0.11);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--navy);font-family:'Segoe UI',sans-serif;color:#fff;
+        min-height:100vh;padding:36px 28px}
+
+  /* ── HEADER ── */
+  .page-header{
+    background:linear-gradient(135deg,rgba(27,79,114,.8),rgba(13,27,42,.95));
+    border:1px solid var(--border); border-radius:18px;
+    padding:28px 36px; margin-bottom:32px;
+    display:flex; align-items:center; gap:20px;
+  }
+  .ph-dot{
+    width:52px;height:52px;border-radius:50%;flex-shrink:0;
+    background:linear-gradient(135deg,var(--accent),var(--gold));
+    display:flex;align-items:center;justify-content:center;font-size:26px;
+  }
+  .ph-title{font-size:22px;font-weight:700;
+    background:linear-gradient(135deg,#fff,var(--gold));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .ph-sub{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:1px;
+            text-transform:uppercase;margin-top:4px}
+  .ph-badge{margin-left:auto;background:rgba(232,160,32,.15);
+             border:1px solid var(--accent);border-radius:20px;
+             padding:6px 16px;font-size:12px;color:var(--gold);font-weight:600}
+
+  /* ── GRID ── */
+  .section-title{
+    font-size:11px;text-transform:uppercase;letter-spacing:2px;
+    color:rgba(255,255,255,.35);margin-bottom:18px;margin-top:8px;
+    padding-left:4px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+    gap:16px; margin-bottom:32px;
+  }
+  .card{
+    background:var(--card);border:1px solid var(--border);border-radius:16px;
+    overflow:hidden;transition:transform .25s,border-color .25s;
+  }
+  .card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.22)}
+  .card-bg{
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;border-bottom:1px solid var(--border);
+  }
+  .icon-img{width:80px;height:80px;border-radius:50%;
+             box-shadow:0 8px 24px rgba(0,0,0,.35)}
+  .card-info{padding:14px 16px}
+  .card-num{font-size:10px;color:rgba(255,255,255,.3);font-weight:600;
+             letter-spacing:1px;margin-bottom:4px}
+  .card-label{font-size:13px;font-weight:600;color:#fff;margin-bottom:3px}
+  .card-usage{font-size:10px;color:rgba(255,255,255,.4);margin-bottom:6px}
+  .card-file{font-size:10px;color:var(--accent);font-family:monospace;
+              background:rgba(232,160,32,.08);border-radius:4px;
+              padding:2px 6px;display:inline-block}
+
+  /* ── GUIDE ── */
+  .guide{
+    background:rgba(27,79,114,.25);border:1px solid rgba(27,79,114,.5);
+    border-radius:14px;padding:24px 28px;
+  }
+  .guide h3{font-size:13px;font-weight:700;color:var(--gold);margin-bottom:14px;
+              text-transform:uppercase;letter-spacing:1px}
+  .guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .step{font-size:12px;color:rgba(255,255,255,.65);line-height:1.6}
+  .step strong{color:#fff}
+  .footer{text-align:center;margin-top:28px;font-size:11px;
+           color:rgba(255,255,255,.2);letter-spacing:1px;text-transform:uppercase}
+  .footer span{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="ph-dot">🎨</div>
+  <div>
+    <div class="ph-title">Jeu d'Icônes – Dashboard BI</div>
+    <div class="ph-sub">Performances Académiques · Université de Douala · Groupe 8</div>
+  </div>
+  <div class="ph-badge">16 icônes · SVG + PNG</div>
+</div>
+
+<div class="section-title">Icônes extraites du dashboard HTML — prêtes à importer dans Power BI</div>
+<div class="grid">
+
+    <div class="card">
+      <div class="card-bg" style="background:#1B4F7222; border-color:#1B4F7244;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+8J+OkyBEaXBsw7RtZSAvIE5pdmVhdTwvdGl0bGU+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFCNEY3MiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyOTgwQjkiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjM4IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2LDE2KSBzY2FsZSgyKSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDwhLS0gVG9xdWUgKG1vcnRhcmJvYXJkKSAtLT4KICAgICAgPHBvbHlnb24gcG9pbnRzPSIxMiwyIDIyLDcgMTIsMTIgMiw3IiBmaWxsPSJ3aGl0ZSIvPgogICAgICA8cGF0aCBkPSJNNiw3IEwxOCw3IEwxOCwxNCBRMTIsMTggNiwxNCBaIgogICAgICAgICAgICBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNDUpIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgICA8bGluZSB4MT0iMjIiIHkxPSI3IiB4Mj0iMjIiIHkyPSIxNCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICAgIDxjaXJjbGUgY3g9IjIyIiBjeT0iMTUuNSIgcj0iMS44IiBmaWxsPSJ3aGl0ZSIvPgogIDwvZz4KPC9zdmc+" alt="🎓 Diplôme / Niveau" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">01</div>
+        <div class="card-label">🎓 Diplôme / Niveau</div>
+        <div class="card-usage">Header · Logo principal</div>
+        <div class="card-file">01_logo_diplome.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#00606422; border-color:#00606444;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+8J+ThSBBbm7DqWUgLyBTZW1lc3RyZTwvdGl0bGU+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwNjA2NCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDgzOEYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjM4IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2LDE2KSBzY2FsZSgyKSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDwhLS0gQ2FsZW5kcmllciAtLT4KICAgICAgPHJlY3QgeD0iMyIgeT0iNCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiByeD0iMiIKICAgICAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICAgIDxsaW5lIHgxPSIzIiB5MT0iMTAiIHgyPSIyMSIgeTI9IjEwIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgICA8bGluZSB4MT0iOCIgeTE9IjIiIHgyPSI4IiB5Mj0iNiIgICBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgICAgPGxpbmUgeDE9IjE2IiB5MT0iMiIgeDI9IjE2IiB5Mj0iNiIgIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgICA8cmVjdCB4PSI3IiAgeT0iMTQiIHdpZHRoPSIyLjUiIGhlaWdodD0iMi41IiByeD0iLjUiIGZpbGw9IndoaXRlIi8+CiAgICAgIDxyZWN0IHg9IjExIiB5PSIxNCIgd2lkdGg9IjIuNSIgaGVpZ2h0PSIyLjUiIHJ4PSIuNSIgZmlsbD0id2hpdGUiLz4KICAgICAgPHJlY3QgeD0iMTUiIHk9IjE0IiB3aWR0aD0iMi41IiBoZWlnaHQ9IjIuNSIgcng9Ii41IiBmaWxsPSJ3aGl0ZSIvPgogICAgICA8cmVjdCB4PSI3IiAgeT0iMTgiIHdpZHRoPSIyLjUiIGhlaWdodD0iMi41IiByeD0iLjUiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC42KSIvPgogICAgICA8cmVjdCB4PSIxMSIgeT0iMTgiIHdpZHRoPSIyLjUiIGhlaWdodD0iMi41IiByeD0iLjUiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC42KSIvPgogIDwvZz4KPC9zdmc+" alt="📅 Année / Semestre" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">02</div>
+        <div class="card-label">📅 Année / Semestre</div>
+        <div class="card-usage">Header · Badges droite</div>
+        <div class="card-file">02_badge_annee.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#0D213722; border-color:#0D213744;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+8J+Pm++4jyBJbnN0aXR1dGlvbiAvIETDqXBhcnRlbWVudDwvdGl0bGU+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBEMjEzNyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxQjRGNzIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjM4IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2LDE2KSBzY2FsZSgyKSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDwhLS0gQsOidGltZW50IC8gVGVtcGxlIC0tPgogICAgICA8cG9seWdvbiBwb2ludHM9IjIsMTAgMTIsMyAyMiwxMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjg1KSIvPgogICAgICA8cmVjdCB4PSI1IiAgeT0iMTAiIHdpZHRoPSIyLjIiIGhlaWdodD0iOSIgcng9Ii41IiBmaWxsPSJ3aGl0ZSIvPgogICAgICA8cmVjdCB4PSI5IiAgeT0iMTAiIHdpZHRoPSIyLjIiIGhlaWdodD0iOSIgcng9Ii41IiBmaWxsPSJ3aGl0ZSIvPgogICAgICA8cmVjdCB4PSIxMyIgeT0iMTAiIHdpZHRoPSIyLjIiIGhlaWdodD0iOSIgcng9Ii41IiBmaWxsPSJ3aGl0ZSIvPgogICAgICA8cmVjdCB4PSIxNyIgeT0iMTAiIHdpZHRoPSIyLjIiIGhlaWdodD0iOSIgcng9Ii41IiBmaWxsPSJ3aGl0ZSIvPgogICAgICA8cmVjdCB4PSI0IiAgeT0iMTkiIHdpZHRoPSIxNiIgIGhlaWdodD0iMiIgcng9Ii41IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuOCkiLz4KICAgICAgPHJlY3QgeD0iMiIgIHk9IjIxIiB3aWR0aD0iMjAiICBoZWlnaHQ9IjIiIHJ4PSIuNSIgZmlsbD0id2hpdGUiLz4KICA8L2c+Cjwvc3ZnPg==" alt="🏛️ Institution" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">03</div>
+        <div class="card-label">🏛️ Institution</div>
+        <div class="card-usage">Header · Badge département</div>
+        <div class="card-file">03_institution.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#1B4F7222; border-color:#1B4F7244;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+8J+TiiBWdWUgR2xvYmFsZTwvdGl0bGU+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFCNEY3MiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyOTgwQjkiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjM4IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2LDE2KSBzY2FsZSgyKSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDwhLS0gR3JhcGhpcXVlIGJhcnJlcyAtLT4KICAgICAgPHJlY3QgeD0iMyIgIHk9IjE1IiB3aWR0aD0iNCIgaGVpZ2h0PSI3IiByeD0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjcpIi8+CiAgICAgIDxyZWN0IHg9IjEwIiB5PSI5IiAgd2lkdGg9IjQiIGhlaWdodD0iMTMiIHJ4PSIxIiBmaWxsPSJ3aGl0ZSIvPgogICAgICA8cmVjdCB4PSIxNyIgeT0iNCIgIHdpZHRoPSI0IiBoZWlnaHQ9IjE4IiByeD0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjg1KSIvPgogICAgICA8bGluZSB4MT0iMiIgeTE9IjIyIiB4Mj0iMjIiIHkyPSIyMiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8L2c+Cjwvc3ZnPg==" alt="📊 Vue Globale" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">04</div>
+        <div class="card-label">📊 Vue Globale</div>
+        <div class="card-usage">Navigation · Page 1</div>
+        <div class="card-file">04_nav_vue_globale.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#8E44AD22; border-color:#8E44AD44;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+8J+OkyBOaXZlYXUgTDEgLyBMMjwvdGl0bGU+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFCNEY3MiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4RTQ0QUQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjM4IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2LDE2KSBzY2FsZSgyKSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDwhLS0gVG9xdWUgKyBMMS9MMiAobcOqbWUgZGVzaWduIHRvcXVlIG1haXMgY291bGV1ciB2aW9sZXR0ZSkgLS0+CiAgICAgIDxwb2x5Z29uIHBvaW50cz0iMTIsMiAyMiw3IDEyLDEyIDIsNyIgZmlsbD0id2hpdGUiLz4KICAgICAgPHBhdGggZD0iTTYsNyBMMTgsNyBMMTgsMTQgUTEyLDE4IDYsMTQgWiIKICAgICAgICAgICAgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjQpIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgICA8bGluZSB4MT0iMjIiIHkxPSI3IiB4Mj0iMjIiIHkyPSIxNCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICAgIDxjaXJjbGUgY3g9IjIyIiBjeT0iMTUuNSIgcj0iMS44IiBmaWxsPSJ3aGl0ZSIvPgogICAgICA8IS0tIEJhZGdlIEwgLS0+CiAgICAgIDxjaXJjbGUgY3g9IjYiIGN5PSIxOCIgcj0iMy41IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMjUpIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgICAgPHRleHQgeD0iNiIgeT0iMjAiIGZvbnQtc2l6ZT0iNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICAgICAgICAgIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC13ZWlnaHQ9ImJvbGQiPkw8L3RleHQ+CiAgPC9nPgo8L3N2Zz4=" alt="🎓 Niveau L1 / L2" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">05</div>
+        <div class="card-label">🎓 Niveau L1 / L2</div>
+        <div class="card-usage">Navigation · Pages 2 & 3</div>
+        <div class="card-file">05_nav_niveau_l1_l2.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#6C348322; border-color:#6C348344;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+8J+TmiBNYXRpw6hyZXMgLyBDb3VyczwvdGl0bGU+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZDMzQ4MyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4RTQ0QUQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjM4IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2LDE2KSBzY2FsZSgyKSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDwhLS0gTGl2cmVzIGVtcGlsw6lzIC0tPgogICAgICA8cmVjdCB4PSIzIiAgeT0iNCIgIHdpZHRoPSIxNSIgaGVpZ2h0PSI1IiByeD0iMSIgZmlsbD0id2hpdGUiLz4KICAgICAgPHJlY3QgeD0iMyIgIHk9IjExIiB3aWR0aD0iMTciIGhlaWdodD0iNSIgcng9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC44KSIvPgogICAgICA8cmVjdCB4PSIzIiAgeT0iMTgiIHdpZHRoPSIxMyIgaGVpZ2h0PSI1IiByeD0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjYpIi8+CiAgICAgIDxsaW5lIHgxPSI1IiB5MT0iNCIgIHgyPSI1IiB5Mj0iOSIgIHN0cm9rZT0icmdiYSgxMDgsNTIsMTMxLDAuNikiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICAgIDxsaW5lIHgxPSI1IiB5MT0iMTEiIHgyPSI1IiB5Mj0iMTYiIHN0cm9rZT0icmdiYSgxMDgsNTIsMTMxLDAuNikiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICAgIDxsaW5lIHgxPSI1IiB5MT0iMTgiIHgyPSI1IiB5Mj0iMjMiIHN0cm9rZT0icmdiYSgxMDgsNTIsMTMxLDAuNikiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPC9nPgo8L3N2Zz4=" alt="📚 Matières" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">06</div>
+        <div class="card-label">📚 Matières</div>
+        <div class="card-usage">Navigation · Cours / L2</div>
+        <div class="card-file">06_nav_matieres.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#B71C1C22; border-color:#B71C1C44;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+4pqg77iPIFByw6lkaWN0aW9uIFJpc3F1ZXM8L3RpdGxlPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNCNzFDMUMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRTc0QzNDIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSIzOCIgZmlsbD0idXJsKCNiZykiLz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNiwxNikgc2NhbGUoMikiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICA8IS0tIFRyaWFuZ2xlIGFsZXJ0ZSAtLT4KICAgICAgPHBhdGggZD0iTTEwLjMgMy45IEwxLjggMTggYTIgMiAwIDAgMCAxLjcgMyBoMTYuOSBhMiAyIDAgMCAwIDEuNy0zIEwxMy43IDMuOSBhMiAyIDAgMCAwLTMuNCAweiIKICAgICAgICAgICAgZmlsbD0id2hpdGUiLz4KICAgICAgPGxpbmUgeDE9IjEyIiB5MT0iOSIgIHgyPSIxMiIgeTI9IjEzLjUiIHN0cm9rZT0iI0I3MUMxQyIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KICAgICAgPGNpcmNsZSBjeD0iMTIiIGN5PSIxNyIgcj0iMS40IiBmaWxsPSIjQjcxQzFDIi8+CiAgPC9nPgo8L3N2Zz4=" alt="⚠️ Prédiction Risques" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">07</div>
+        <div class="card-label">⚠️ Prédiction Risques</div>
+        <div class="card-usage">Navigation · Page 4</div>
+        <div class="card-file">07_nav_prediction_risques.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#1B4F7222; border-color:#1B4F7244;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+8J+RpSBQcm9maWwgw4l0dWRpYW50PC90aXRsZT4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMUI0RjcyIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI5ODBCOSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMzgiIGZpbGw9InVybCgjYmcpIi8+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTYsMTYpIHNjYWxlKDIpIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgPCEtLSBEZXV4IHBlcnNvbm5lcyAtLT4KICAgICAgPGNpcmNsZSBjeD0iOCIgIGN5PSI3IiAgcj0iNCIgZmlsbD0id2hpdGUiLz4KICAgICAgPHBhdGggZD0iTTAgMjEgdi0yIGE4IDggMCAwIDEgMTIuOS02LjMiIGZpbGw9IndoaXRlIi8+CiAgICAgIDxjaXJjbGUgY3g9IjE3IiBjeT0iOCIgIHI9IjMiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC43KSIvPgogICAgICA8cGF0aCBkPSJNMTQgMjEgdi0yIGE1IDUgMCAwIDEgNS01IgogICAgICAgICAgICBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC43KSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgPC9nPgo8L3N2Zz4=" alt="👥 Profil Étudiant" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">08</div>
+        <div class="card-label">👥 Profil Étudiant</div>
+        <div class="card-usage">Navigation · Page 5</div>
+        <div class="card-file">08_nav_profil_etudiant.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#1B5E2022; border-color:#1B5E2044;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+4pyFIFRhdXggZGUgUsOpdXNzaXRlPC90aXRsZT4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMUI1RTIwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI3QUU2MCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMzgiIGZpbGw9InVybCgjYmcpIi8+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTYsMTYpIHNjYWxlKDIpIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgPCEtLSBDZXJjbGUgY2hlY2sgLS0+CiAgICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjkuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICAgIDxwb2x5bGluZSBwb2ludHM9IjcsMTIgMTAuNSwxNS41IDE3LDkiCiAgICAgICAgICAgICAgICBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIvPgogIDwvZz4KPC9zdmc+" alt="✅ Taux de Réussite" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">09</div>
+        <div class="card-label">✅ Taux de Réussite</div>
+        <div class="card-usage">KPI Card 1 · Vert</div>
+        <div class="card-file">09_kpi_reussite.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#B71C1C22; border-color:#B71C1C44;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+4p2MIFRhdXggZCfDiWNoZWM8L3RpdGxlPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNCNzFDMUMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRTUzOTM1Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSIzOCIgZmlsbD0idXJsKCNiZykiLz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNiwxNikgc2NhbGUoMikiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICA8IS0tIENlcmNsZSBYIC0tPgogICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI5LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgICA8bGluZSB4MT0iMTUuNSIgeTE9IjguNSIgeDI9IjguNSIgeTI9IjE1LjUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgICAgIDxsaW5lIHgxPSI4LjUiICB5MT0iOC41IiB4Mj0iMTUuNSIgeTI9IjE1LjUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgPC9nPgo8L3N2Zz4=" alt="❌ Taux d'Échec" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">10</div>
+        <div class="card-label">❌ Taux d'Échec</div>
+        <div class="card-usage">KPI Card 2 · Rouge</div>
+        <div class="card-file">10_kpi_echec.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#1B4F7222; border-color:#1B4F7244;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+8J+TiiBNb3llbm5lIEfDqW7DqXJhbGU8L3RpdGxlPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQjRGNzIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMjk4MEI5Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSIzOCIgZmlsbD0idXJsKCNiZykiLz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNiwxNikgc2NhbGUoMikiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICA8IS0tIEJhcnJlcyArIGxpZ25lIG1veWVubmUgLS0+CiAgICAgIDxyZWN0IHg9IjMiICB5PSIxNCIgd2lkdGg9IjQiIGhlaWdodD0iOCIgcng9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC43KSIvPgogICAgICA8cmVjdCB4PSIxMCIgeT0iOCIgIHdpZHRoPSI0IiBoZWlnaHQ9IjE0IiByeD0iMSIgZmlsbD0id2hpdGUiLz4KICAgICAgPHJlY3QgeD0iMTciIHk9IjUiICB3aWR0aD0iNCIgaGVpZ2h0PSIxNyIgcng9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC44NSkiLz4KICAgICAgPGxpbmUgeDE9IjIiICB5MT0iMjIiIHgyPSIyMiIgeTI9IjIyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgICA8bGluZSB4MT0iMiIgIHkxPSIxMSIgeDI9IjIyIiB5Mj0iMTEiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjUpIgogICAgICAgICAgICBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1kYXNoYXJyYXk9IjMsMiIvPgogIDwvZz4KPC9zdmc+" alt="📊 Moyenne Générale" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">11</div>
+        <div class="card-label">📊 Moyenne Générale</div>
+        <div class="card-usage">KPI Card 3 · Bleu</div>
+        <div class="card-file">11_kpi_moyenne.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#1565C022; border-color:#1565C044;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+8J+RqOKAjfCfjpMgVG90YWwgw4l0dWRpYW50czwvdGl0bGU+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE1NjVDMCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0MkE1RjUiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjM4IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2LDE2KSBzY2FsZSgyKSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDwhLS0gw4l0dWRpYW50IGF2ZWMgdG9xdWUgLS0+CiAgICAgIDxwb2x5Z29uIHBvaW50cz0iMTIsMSAyMCw0LjUgMTIsOCA0LDQuNSIgZmlsbD0id2hpdGUiLz4KICAgICAgPGxpbmUgeDE9IjIwIiB5MT0iNC41IiB4Mj0iMjAiIHkyPSIxMCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICAgICAgPGNpcmNsZSBjeD0iMjAiIGN5PSIxMSIgcj0iMS4zIiBmaWxsPSJ3aGl0ZSIvPgogICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjE0IiByPSI0IiAgIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC44NSkiLz4KICAgICAgPHBhdGggZD0iTTUgMjMgYzAtMy45IDMuMS03IDctNyBzNyAzLjEgNyA3IgogICAgICAgICAgICBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNSkiLz4KICA8L2c+Cjwvc3ZnPg==" alt="👨‍🎓 Total Étudiants" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">12</div>
+        <div class="card-label">👨‍🎓 Total Étudiants</div>
+        <div class="card-usage">KPI Card 4 · Bleu clair</div>
+        <div class="card-file">12_kpi_total_etudiants.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#C0392B22; border-color:#C0392B44;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+8J+aqyBUYXV4IEFic2VudMOpaXNtZTwvdGl0bGU+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0MwMzkyQiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFNzRDM0MiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjM4IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2LDE2KSBzY2FsZSgyKSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDwhLS0gQ2VyY2xlIGludGVyZGl0IChzbGFzaCkgLS0+CiAgICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjkuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICAgIDxsaW5lIHgxPSI1LjQiIHkxPSI1LjQiIHgyPSIxOC42IiB5Mj0iMTguNiIKICAgICAgICAgICAgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KICA8L2c+Cjwvc3ZnPg==" alt="🚫 Taux Absentéisme" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">13</div>
+        <div class="card-label">🚫 Taux Absentéisme</div>
+        <div class="card-usage">KPI Card 5 · Rouge foncé</div>
+        <div class="card-file">13_kpi_absenteisme.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#E67E2222; border-color:#E67E2244;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+4pqg77iPIMOJdHVkaWFudHMgw6AgUmlzcXVlPC90aXRsZT4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTY3RTIyIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI0U4QTAyMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMzgiIGZpbGw9InVybCgjYmcpIi8+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTYsMTYpIHNjYWxlKDIpIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgPCEtLSBUcmlhbmdsZSBhbGVydGUgb3JhbmdlIC0tPgogICAgICA8cGF0aCBkPSJNMTAuMyAzLjkgTDEuOCAxOCBhMiAyIDAgMCAwIDEuNyAzIGgxNi45IGEyIDIgMCAwIDAgMS43LTMgTDEzLjcgMy45IGEyIDIgMCAwIDAtMy40IDB6IgogICAgICAgICAgICBmaWxsPSJ3aGl0ZSIvPgogICAgICA8bGluZSB4MT0iMTIiIHkxPSI5IiAgeDI9IjEyIiB5Mj0iMTMuNSIgc3Ryb2tlPSIjRTY3RTIyIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjE3IiByPSIxLjQiIGZpbGw9IiNFNjdFMjIiLz4KICA8L2c+Cjwvc3ZnPg==" alt="⚠️ Étudiants à Risque" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">14</div>
+        <div class="card-label">⚠️ Étudiants à Risque</div>
+        <div class="card-usage">KPI Card 6 · Orange</div>
+        <div class="card-file">14_kpi_etudiants_risque.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#4A148C22; border-color:#4A148C44;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+8J+Om++4jyBGaWx0cmVzIEludGVyYWN0aWZzPC90aXRsZT4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNEExNDhDIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzdCMUZBMiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMzgiIGZpbGw9InVybCgjYmcpIi8+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTYsMTYpIHNjYWxlKDIpIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgPCEtLSBTbGlkZXJzIC8gY3Vyc2V1cnMgLS0+CiAgICAgIDxsaW5lIHgxPSI0IiAgeTE9IjYiICB4Mj0iMjAiIHkyPSI2IiAgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICAgIDxjaXJjbGUgY3g9IjE0IiBjeT0iNiIgIHI9IjIuOCIgZmlsbD0id2hpdGUiLz4KICAgICAgPGxpbmUgeDE9IjQiICB5MT0iMTIiIHgyPSIyMCIgeTI9IjEyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgICAgPGNpcmNsZSBjeD0iOCIgIGN5PSIxMiIgcj0iMi44IiBmaWxsPSJ3aGl0ZSIvPgogICAgICA8bGluZSB4MT0iNCIgIHkxPSIxOCIgeDI9IjIwIiB5Mj0iMTgiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE4IiByPSIyLjgiIGZpbGw9IndoaXRlIi8+CiAgPC9nPgo8L3N2Zz4=" alt="🎛️ Filtres Interactifs" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">15</div>
+        <div class="card-label">🎛️ Filtres Interactifs</div>
+        <div class="card-usage">Section Bas · Titre</div>
+        <div class="card-file">15_filtres_interactifs.svg</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bg" style="background:#E6510022; border-color:#E6510044;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIj4KICA8dGl0bGU+8J+OryBJbmRpY2F0ZXVyIEdsb2JhbDwvdGl0bGU+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0U2NTEwMCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFOEEwMjAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjM4IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2LDE2KSBzY2FsZSgyKSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDwhLS0gQ2libGUgY29uY2VudHJpcXVlIC0tPgogICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIgIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI2LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS44IgogICAgICAgICAgICAgIG9wYWNpdHk9Ii43NSIvPgogICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIzIiAgIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS41IgogICAgICAgICAgICAgIG9wYWNpdHk9Ii42Ii8+CiAgICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEuMiIgZmlsbD0id2hpdGUiLz4KICA8L2c+Cjwvc3ZnPg==" alt="🎯 Indicateur Global" class="icon-img"/>
+      </div>
+      <div class="card-info">
+        <div class="card-num">16</div>
+        <div class="card-label">🎯 Indicateur Global</div>
+        <div class="card-usage">Section Bas · Titre</div>
+        <div class="card-file">16_indicateur_global.svg</div>
+      </div>
+    </div>
+</div>
+
+<div class="guide">
+  <h3>📥 Comment utiliser ces icônes dans Power BI</h3>
+  <div class="guide-grid">
+    <div class="step">
+      <strong>PNG 64px</strong> → à utiliser dans le visuel <em>Image</em>
+      pour les KPI cards et la navigation.
+    </div>
+    <div class="step">
+      <strong>PNG 128px</strong> → pour le logo header ou les grands visuels
+      dans un fond sombre.
+    </div>
+    <div class="step">
+      <strong>SVG</strong> → compatible avec le visuel <em>Image</em> dans
+      Power BI Desktop (File → Import → Image).
+    </div>
+    <div class="step">
+      <strong>Conseil</strong> → Pour associer l'icône à une mesure DAX,
+      héberge le PNG sur OneDrive et référence l'URL dans une colonne Image.
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  Dashboard BI · <span>Groupe 8</span> · Université de Douala · 2024–2025
+</div>
+</body>
+</html>

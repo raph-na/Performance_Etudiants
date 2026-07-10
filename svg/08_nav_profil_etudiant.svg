@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <title>👥 Profil Étudiant</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4F72"/>
+      <stop offset="100%" stop-color="#2980B9"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="38" fill="url(#bg)"/>
+  <g transform="translate(16,16) scale(2)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Deux personnes -->
+      <circle cx="8"  cy="7"  r="4" fill="white"/>
+      <path d="M0 21 v-2 a8 8 0 0 1 12.9-6.3" fill="white"/>
+      <circle cx="17" cy="8"  r="3" fill="rgba(255,255,255,0.7)"/>
+      <path d="M14 21 v-2 a5 5 0 0 1 5-5"
+            stroke="rgba(255,255,255,0.7)" stroke-width="2" fill="none"/>
+  </g>
+</svg>

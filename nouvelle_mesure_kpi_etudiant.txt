@@ -1,0 +1,36 @@
+# Moyenne générale
+Moyenne_Generale = AVERAGE(FAITS_NOTES[MOY])
+
+#Taux de réussite
+Taux_Reussite =
+DIVIDE(
+COUNTROWS(FILTER(FAITS_NOTES, FAITS_NOTES[MOY]>=10)),
+COUNTROWS(FAITS_NOTES)
+)
+
+#Taux d’échec
+Taux_Echec = 1 - [Taux_Reussite]
+
+#Nombre étudiants
+Nb_Etudiants =
+DISTINCTCOUNT(FACT_NOTE[id_etudiant])
+
+#Nombre redoublants
+Nb_Redoublants =
+CALCULATE(
+COUNTROWS(DIM_ETUDIANT),
+DIM_ETUDIANT[redoublant]="Redoublant"
+)
+
+#Nbre dee validé 
+Nbre_valide = COUNTROWS(FILTER(SUMMARIZE(FAITS_NOTES,FAITS_NOTES[id_etudiant],FAITS_NOTES[id_semestre],"Moyenne",AVERAGE(FAITS_NOTES[MOY])),[Moyenne]>=10))
+
+#MOyenne des niveau 1
+MoyenneL1 = CALCULATE(AVERAGE(FAITS_NOTES[MOY]),FAITS_NOTES[id_niveau]==1)MoyenneL1 = CALCULATE(AVERAGE(FAITS_NOTES[MOY]),FAITS_NOTES[id_niveau]==1)
+
+#Tranche note cc
+if[CC]<5 then "0-5"
+else if [CC]<10 then "5-10"
+else if [CC]<15 then "10-15"
+else if [CC]>=15 then "15-20"
+else "null"

@@ -1,0 +1,46 @@
+Nb_Etudiants = COUNTROWS(FAITS_NOTES_2)
+
+Nb_Valides = 
+CALCULATE(
+    COUNTROWS(FAITS_NOTES_2),
+    FAITS_NOTES_2[Resultat] = "VA"
+)
+
+Nb_Echecs =
+CALCULATE(
+    COUNTROWS(FAITS_NOTES_2),
+    FAITS_NOTES_2[Resultat] = "NV"
+)
+
+Nb_Abandons =
+CALCULATE(
+    COUNTROWS(FAITS_NOTES_2),
+    FAITS_NOTES_2[Resultat] = "Abandon"
+)
+
+Taux_Reussite =
+DIVIDE([Nb_Valides],[Nb_Etudiants],0)
+
+Taux_Echec =
+DIVIDE([Nb_Echecs],[Nb_Etudiants],0)
+
+Taux_Abandon =
+DIVIDE([Nb_Abandons],[Nb_Etudiants],0)
+
+Moyenne_Generale =
+CALCULATE(
+    AVERAGE(FAITS_NOTES_2[Moyenne_gen]),
+    FAITS_NOTES_2[Resultat] <> "Abandon"
+)
+Moyenne_Valides =
+CALCULATE(
+AVERAGE(FAITS_NOTES_2[Moy_Générale]),
+FAITS_NOTES_2[Statut]="Validé"
+)
+
+Moyenne_Echecs =
+CALCULATE(
+AVERAGE(FAITS_NOTES_2[Moy_Générale]),
+FAITS_NOTES_2[Statut]="Échec"
+)
+

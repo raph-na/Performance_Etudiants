@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <title>🎯 Indicateur Global</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E65100"/>
+      <stop offset="100%" stop-color="#E8A020"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="38" fill="url(#bg)"/>
+  <g transform="translate(16,16) scale(2)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cible concentrique -->
+      <circle cx="12" cy="12" r="10"  fill="none" stroke="white" stroke-width="2"/>
+      <circle cx="12" cy="12" r="6.5" fill="none" stroke="white" stroke-width="1.8"
+              opacity=".75"/>
+      <circle cx="12" cy="12" r="3"   fill="none" stroke="white" stroke-width="1.5"
+              opacity=".6"/>
+      <circle cx="12" cy="12" r="1.2" fill="white"/>
+  </g>
+</svg>
