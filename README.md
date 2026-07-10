@@ -223,4 +223,9 @@ Njom Alphonse
 
 
 #Visualisation
-![Dashboard d'accueil](images/dashboard_accueil.png)
+![PV de notes](image/pv_note.png)
+![Schema en Etoile](image/etoile.png)
+![Dashboard Vue Generale](image/page1.png)
+![Dashboard Comparaison L1/L2](image/page2.png)
+![Dashboard Facteur d'echec 1](image/page3.png)
+![Dashboard Facteur d'echec 1](image/page4.png)
